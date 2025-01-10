@@ -53,11 +53,11 @@ border-radius: 10px;
 <div id="text"><p>Password:</p>
 
 <p>Google Maps Street View <br><br> 52°22'56.8"N 4°51'19.6"E</p>
-
+<p>Hint: It is a celebrity</p>
 </div>  
 <input type="password" id="password" placeholder="Password">
 <button onclick="checkPassword()">Login</button>
-<img id="secretImage" src="https://raw.githubusercontent.com/Sillyhall/new-servant/main/pic/sign.jpg" alt="SecretImage">
+<img id="secretImage" src="https://raw.githubusercontent.com/Sillyhall/new-servant/main/pic/Sign.jpg" alt="SecretImage">
 </div>
 
 <script>
@@ -69,6 +69,7 @@ if (passwordInput === "Bread Pitt") {
 document.querySelector('input[type="password"]').style.display = 'none';
 document.querySelector('button').style.display = 'none';
 document.getElementById("headline").style.display = "none"; 
+  document.getElementById("text").style.display = "none"; 
 secretImage.style.display = 'block';
 } else {
 alert('Try again');
