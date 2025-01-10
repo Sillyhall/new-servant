@@ -1,16 +1,74 @@
-<html>
-    <head>
-        <script>
-            function speak() {
-                alert('Hello')
-            }
-        </script>
-    </head>
-    <body>
-        <label for="userPassword">Password: </label>
-        <input id="userPassword" type="password" required />
-        <input type="submit" value="Submit" />
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SillyHall</title>
+<style>
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f0f0f0;
+font-family: Arial, sans-serif;
+}
+.container {
+text-align: center;
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="password"] {
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 200px;
+}
+button {
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+background-color: #28a745;
+color: white;
+cursor: pointer;
+}
+button:hover {
+background-color: #218838;
+}
+img {
+display: none;
+margin-top: 20px;
+max-width: 100%;
+border-radius: 10px;
+}
+</style>
+</head>
+<body>
 
-        <button onclick="speak()">Click Me</button>
-    </body>
+<div class="container">
+<h1>Enter password</h1>
+<input type="password" id="password" placeholder="Password">
+<button onclick="checkPassword()">Login</button>
+<img id="secretImage" src="https://via.placeholder.com/400" alt="SecretImage">
+</div>
+
+<script>
+function checkPassword() {
+const passwordInput = document.getElementById('password').value;
+const secretImage = document.getElementById('secretImage');
+
+if (passwordInput === "Bread Pitt") {
+document.querySelector('input[type="password"]').style.display = 'none';
+document.querySelector('button').style.display = 'none';
+secretImage.style.display = 'block';
+} else {
+alert('Try again');
+}
+}
+</script>
+
+</body>
 </html>
