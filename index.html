@@ -49,7 +49,7 @@ border-radius: 10px;
 <body>
 
 <div class="container">
-<h1>Enter password</h1>
+<div id="headline"><h1>Enter password</h1></div>
 <input type="password" id="password" placeholder="Password">
 <button onclick="checkPassword()">Login</button>
 <img id="secretImage" src="https://via.placeholder.com/400" alt="SecretImage">
@@ -63,6 +63,7 @@ const secretImage = document.getElementById('secretImage');
 if (passwordInput === "Bread Pitt") {
 document.querySelector('input[type="password"]').style.display = 'none';
 document.querySelector('button').style.display = 'none';
+document.getElementById("headline").style.display = "none"; 
 secretImage.style.display = 'block';
 } else {
 alert('Try again');
